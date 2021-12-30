@@ -9,6 +9,8 @@ import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.FireworkMeta;
 
+import java.util.Random;
+
 public class Chest implements CommandExecutor {
 
     @Override
@@ -17,11 +19,13 @@ public class Chest implements CommandExecutor {
         if (sender instanceof Player) {
 
             Player p = (Player) sender;
+            Random r = new Random();
 
-            Firework firework = p.getWorld().spawn(p.getLocation().add(0, -3, 0), Firework.class);
+            for (int i = 0; i < 8; i++) {
+            Firework firework = p.getWorld().spawn(p.getLocation().add(r.nextInt(3), -3, r.nextInt(3)), Firework.class);
             FireworkMeta meta = firework.getFireworkMeta();
 
-            meta.addEffect(FireworkEffect.builder().withColor(Color.GREEN).with(FireworkEffect.Type.CREEPER).withFlicker().build());
+            meta.addEffect(FireworkEffect.builder().withColor(Color.GREEN).with(FireworkEffect.Type.STAR).withFlicker().build());
             firework.setFireworkMeta(meta);
 
         }
