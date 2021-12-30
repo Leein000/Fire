@@ -22,14 +22,17 @@ public class Chest implements CommandExecutor {
             Random r = new Random();
 
             for (int i = 0; i < 8; i++) {
-            Firework firework = p.getWorld().spawn(p.getLocation().add(r.nextInt(3), -3, r.nextInt(3)), Firework.class);
-            FireworkMeta meta = firework.getFireworkMeta();
+                Firework firework = p.getWorld().spawn(p.getLocation().add(r.nextInt(3), -3, r.nextInt(3)), Firework.class);
+                FireworkMeta meta = firework.getFireworkMeta();
 
-            meta.addEffect(FireworkEffect.builder().withColor(Color.GREEN).with(FireworkEffect.Type.STAR).withFlicker().build());
-            firework.setFireworkMeta(meta);
+                meta.addEffect(FireworkEffect.builder().withColor(Color.GREEN).with(FireworkEffect.Type.STAR).withFlicker().build());
+                firework.setFireworkMeta(meta);
 
+            }
         }
 
         return false;
+
     }
+
 }
