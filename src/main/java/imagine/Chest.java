@@ -1,4 +1,4 @@
-package imagine.imagine;
+package imagine;
 
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
