@@ -1,6 +1,6 @@
 name: Imagine
 version: '${project.version}'
-main: imagine.imagine.Imagine
+main: imagine.imagine.Chest
 api-version: 1.17
 commands:
   Chest:
