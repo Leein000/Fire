@@ -3,5 +3,5 @@ version: '${project.version}'
 main: imagine.imagine.Imagine
 api-version: 1.17
 commands:
-  fire:
+  Chest:
     description:
