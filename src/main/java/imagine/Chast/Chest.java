@@ -1,4 +1,4 @@
-package imagine;
+package imagine.Chast;
 
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
